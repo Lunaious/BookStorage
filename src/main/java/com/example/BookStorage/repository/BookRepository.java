@@ -1,6 +1,7 @@
 package com.example.BookStorage.repository;
 
 import com.example.BookStorage.model.Book;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Repository
 public class BookRepository implements BookRepoInterface{
+    @Autowired
     private JdbcTemplate jdbcTemplate;
     @Override
     public List<Book> getAllBooks(){
